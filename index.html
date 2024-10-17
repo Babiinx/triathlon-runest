@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculateur de Rythme de Triathlon</title>
+    <!-- Lien vers Font Awesome pour les icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Lien vers le fichier CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header avec le logo et le menu centré -->
+    <header>
+        <div class="header-container">
+            <!-- Logo sur le côté gauche -->
+            <div class="header-left">
+                <img src="logo.png" alt="Logo Runest" class="logo">
+            </div>
+            <!-- Menu centré -->
+            <div class="header-center">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Calculateur</a></li>
+                        <li><a href="explications.html">Explications</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- Espace pour les fonctionnalités futures -->
+            <div class="header-right">
+                <!-- Espace vide pour l'instant -->
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>Calculateur de Rythme de Triathlon</h1>
+
+        <!-- Contenu du Calculateur -->
+        <div class="section">
+            <label for="triathlon-size"><i class="fas fa-flag-checkered"></i> Taille du Triathlon :</label>
+            <div class="input-group">
+                <select id="triathlon-size">
+                    <option value="S">S - Sprint</option>
+                    <option value="M">M - Olympique</option>
+                    <option value="L">L - Half Ironman</option>
+                    <option value="XL">XL - Ironman</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2><i class="fas fa-swimmer"></i> Natation</h2>
+            <label>Rythme (min:s par 100m) :</label>
+            <div class="input-group">
+                <input type="number" id="swim-pace-min" placeholder="Min" min="0" max="59">
+                <input type="number" id="swim-pace-sec" placeholder="Sec" min="0" max="59">
+            </div>
+        </div>
+
+        <div class="section">
+            <h2><i class="fas fa-shoe-prints"></i> Transition 1 (T1)</h2>
+            <label>Temps de Transition T1 (min:s) :</label>
+            <div class="input-group">
+                <input type="number" id="t1-min" placeholder="Min" min="0" max="59">
+                <input type="number" id="t1-sec" placeholder="Sec" min="0" max="59">
+            </div>
+        </div>
+
+        <div class="section">
+            <h2><i class="fas fa-biking"></i> Vélo</h2>
+            <label>Vitesse (km/h) :</label>
+            <div class="input-group">
+                <input type="number" id="bike-pace" placeholder="ex : 30" step="0.1" min="1">
+            </div>
+        </div>
+
+        <div class="section">
+            <h2><i class="fas fa-shoe-prints"></i> Transition 2 (T2)</h2>
+            <label>Temps de Transition T2 (min:s) :</label>
+            <div class="input-group">
+                <input type="number" id="t2-min" placeholder="Min" min="0" max="59">
+                <input type="number" id="t2-sec" placeholder="Sec" min="0" max="59">
+            </div>
+        </div>
+
+        <div class="section">
+            <h2><i class="fas fa-running"></i> Course à Pied</h2>
+            <label>Rythme (min:s par km) :</label>
+            <div class="input-group">
+                <input type="number" id="run-pace-min" placeholder="Min" min="0" max="59">
+                <input type="number" id="run-pace-sec" placeholder="Sec" min="0" max="59">
+            </div>
+            <div class="durability">
+                <label>Niveau de Durabilité :</label>
+                <progress id="durability-gauge" value="100" max="100"></progress>
+            </div>
+        </div>
+
+        <div id="discipline-times">
+            <div class="discipline-time">
+                <p><i class="fas fa-swimmer"></i> Temps Natation :</p>
+                <span id="swim-time">0h 0m 0s</span>
+            </div>
+            <div class="discipline-time">
+                <p><i class="fas fa-shoe-prints"></i> Temps T1 :</p>
+                <span id="t1-time">0h 0m 0s</span>
+            </div>
+            <div class="discipline-time">
+                <p><i class="fas fa-biking"></i> Temps Vélo :</p>
+                <span id="bike-time">0h 0m 0s</span>
+            </div>
+            <div class="discipline-time">
+                <p><i class="fas fa-shoe-prints"></i> Temps T2 :</p>
+                <span id="t2-time">0h 0m 0s</span>
+            </div>
+            <div class="discipline-time">
+                <p><i class="fas fa-running"></i> Temps Course à Pied :</p>
+                <span id="run-time">0h 0m 0s</span>
+            </div>
+            <hr>
+            <div class="discipline-time">
+                <p><i class="fas fa-hourglass-start"></i> Temps Total Prévu :</p>
+                <span id="total-time">0h 0m 0s</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section de partage -->
+    <div class="share-section">
+        <h2>Partagez ce Calculateur</h2>
+        <div class="share-buttons">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=VOTRE_URL" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+            <a href="https://twitter.com/intent/tweet?url=VOTRE_URL&text=Calculateur%20de%20Rythme%20de%20Triathlon" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+            <a href="mailto:?subject=Calculateur%20de%20Rythme%20de%20Triathlon&body=Découvrez%20ce%20calculateur%20:%20VOTRE_URL" target="_blank"><i class="fas fa-envelope"></i> Email</a>
+        </div>
+        <p>Intégrez ce calculateur sur votre site :</p>
+        <div class="embed-code">
+            &lt;iframe src="VOTRE_URL" width="100%" height="800px" frameborder="0"&gt;&lt;/iframe&gt;
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>Ce calculateur a été réalisé par <strong>Gaspard Boidin (Gaspard Run)</strong>. Tous droits réservés.</p>
+    </footer>
+
+    <!-- Charger le script avec defer pour qu'il s'exécute après le chargement du DOM -->
+    <!-- Juste avant la balise </body> à la fin de index.html -->
+    <script src="script.js" defer></script>
+</body>
+</html>

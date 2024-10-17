@@ -1,0 +1,306 @@
+:root {
+    /* Couleurs par défaut */
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --primary-color: #0024dd; /* Bleu */
+    --accent-color: #e7d800;  /* Jaune */
+    --input-bg-color: #f0f0f0;
+    --input-border-color: #cccccc;
+    --container-bg-color: #ffffff;
+    --box-shadow-color: rgba(0, 0, 0, 0.2); /* Ombre noire avec faible opacité */
+    --durability-color: #e7d800; /* Couleur de la jauge de durabilité */
+}
+
+html {
+    overflow-y: scroll; /* Forcer l'affichage de la barre de défilement verticale */
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* S'assurer que le body occupe toute la hauteur de la fenêtre */
+}
+
+/* Header */
+header {
+    background-color: var(--primary-color);
+    padding: 10px 0;
+    box-shadow: 0 2px 5px var(--box-shadow-color);
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+/* Sections du header */
+.header-left,
+.header-center,
+.header-right {
+    flex: 1;
+}
+
+/* Logo sur le côté gauche */
+.header-left {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.logo {
+    height: 70px; /* Agrandir le logo */
+    /* Vous pouvez ajuster la hauteur selon vos besoins */
+}
+
+/* Menu centré */
+.header-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav a {
+    color: var(--bg-color);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+nav a:hover {
+    color: var(--accent-color);
+}
+
+/* Espace pour les fonctionnalités futures */
+.header-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    /* Vous pouvez ajouter des éléments ici à l'avenir */
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+    background: var(--container-bg-color);
+    padding: 20px;
+    box-shadow: 0 0 15px var(--box-shadow-color);
+    border-radius: 10px;
+    flex: 1; /* Prendre l'espace disponible pour pousser le footer vers le bas */
+}
+
+h1, h2 {
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.input-group input, .input-group select {
+    flex: 1; /* Ajouté pour uniformiser la largeur */
+    padding: 8px;
+    box-sizing: border-box;
+    background-color: var(--input-bg-color);
+    color: var(--text-color);
+    border: 1px solid var(--input-border-color);
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.input-group input:last-child, .input-group select:last-child {
+    margin-right: 0;
+}
+
+.durability {
+    margin-top: 10px;
+}
+
+progress {
+    width: 100%;
+    height: 20px;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+progress::-webkit-progress-bar {
+    background-color: var(--input-bg-color);
+    border-radius: 5px;
+}
+
+progress::-webkit-progress-value {
+    background-color: var(--durability-color);
+    border-radius: 5px;
+}
+
+progress::-moz-progress-bar {
+    background-color: var(--durability-color);
+    border-radius: 5px;
+}
+
+#discipline-times {
+    margin-top: 20px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.discipline-time {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.discipline-time p {
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.discipline-time span {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+h2 i, label i {
+    margin-right: 5px;
+    color: var(--accent-color);
+}
+
+.discipline-time p i {
+    margin-right: 5px;
+    color: var(--accent-color);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: var(--input-bg-color);
+    margin-top: auto; /* Pousser le footer vers le bas */
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+    color: var(--text-color);
+}
+
+.share-section {
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.share-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.share-buttons a {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.share-buttons a i {
+    margin-right: 5px;
+}
+
+.embed-code {
+    background-color: var(--input-bg-color);
+    color: var(--text-color);
+    padding: 10px;
+    border: 1px solid var(--input-border-color);
+    border-radius: 5px;
+    margin-top: 10px;
+    word-break: break-all;
+}
+
+@media (max-width: 800px) {
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-left,
+    .header-center,
+    .header-right {
+        flex: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    .header-left,
+    .header-right {
+        margin: 10px 0;
+    }
+
+    .logo {
+        height: 60px;
+    }
+}
+
+@media (max-width: 600px) {
+    .container, .share-section {
+        width: 95%;
+    }
+
+    .input-group {
+        flex-direction: column;
+    }
+
+    .input-group input, .input-group select {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .input-group input:last-child, .input-group select:last-child {
+        margin-bottom: 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav li {
+        margin: 5px 0;
+    }
+}

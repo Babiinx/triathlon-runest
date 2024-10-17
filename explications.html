@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Explications - Calculateur de Rythme de Triathlon</title>
+    <!-- Lien vers Font Awesome pour les icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Lien vers le fichier CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header avec le logo et le menu centré -->
+    <header>
+        <div class="header-container">
+            <!-- Logo sur le côté gauche -->
+            <div class="header-left">
+                <img src="logo.png" alt="Logo Runest" class="logo">
+            </div>
+            <!-- Menu centré -->
+            <div class="header-center">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Calculateur</a></li>
+                        <li><a href="explications.html">Explications</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- Espace pour les fonctionnalités futures -->
+            <div class="header-right">
+                <!-- Espace vide pour l'instant -->
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>Explications</h1>
+        <p>Ce calculateur de rythme de triathlon est un outil conçu pour vous aider à estimer vos temps sur chaque discipline en fonction de vos rythmes personnels et de la taille du triathlon. Il prend en compte les temps de transition T1 (entre la natation et le vélo) et T2 (entre le vélo et la course à pied), ce qui vous permet d'avoir une estimation complète de votre performance.</p>
+
+        <p><strong>Intérêt du Calculateur :</strong> Cet outil vous permet de planifier vos entraînements et vos courses en ayant une idée précise de vos temps prévisionnels. Cela peut vous aider à fixer des objectifs réalistes et à mieux gérer votre effort lors de la compétition.</p>
+
+        <p><strong>Calcul du Niveau de Durabilité :</strong> Le niveau de durabilité est une estimation de la fatigue accumulée au cours de la compétition. Il est calculé en fonction de vos rythmes et des distances pour chaque discipline. Une durabilité élevée signifie que vous avez encore beaucoup d'énergie, tandis qu'une durabilité faible indique une fatigue importante.</p>
+
+        <p>La formule simplifiée utilisée pour calculer la durabilité est la suivante :</p>
+
+        <ul>
+            <li><strong>Natation :</strong> Influence de la natation = (Rythme Natation en min/100m) × (Distance Natation en m / 100)</li>
+            <li><strong>Vélo :</strong> Influence du vélo = (Distance Vélo en km / Vitesse Vélo en km/h) × 2</li>
+            <li><strong>Course à Pied :</strong> Influence de la course = (Rythme Course en min/km) × (Distance Course en km / 10)</li>
+        </ul>
+
+        <p>La durabilité initiale est de 100. À chaque discipline, on soustrait l'influence correspondante. Le résultat est limité entre 0 et 100.</p>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>Ce calculateur a été réalisé par <strong>Gaspard Boidin (Gaspard Run)</strong>. Tous droits réservés.</p>
+    </footer>
+
+    <!-- Charger le script avec defer pour qu'il s'exécute après le chargement du DOM -->
+    <script src="script.js" defer></script>
+</body>
+</html>
+
+
