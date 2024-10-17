@@ -1,28 +1,34 @@
 :root {
     /* Couleurs par défaut (mode jour) */
     --bg-color: #ffffff;
+    --header-color: #f0f0f0;
     --text-color: #000000;
     --primary-color: #0024dd; /* Bleu */
-    --accent-color: #e7d800;  /* Jaune */
+    --h1-color: #0024dd; /* Bleu */
+    --accent-color: #0024dd;  /* Jaune */
+    --night-color: #f0f0f0; 
     --input-bg-color: #f0f0f0;
     --input-border-color: #cccccc;
     --container-bg-color: #ffffff;
     --box-shadow-color: rgba(0, 0, 0, 0.2); /* Ombre noire avec faible opacité */
-    --durability-color: #0024dd; /* Bleu */
+    --durability-color: #e7d800; /* Bleu */
     --success-color: #28a745; /* Vert pour les messages de succès */
 }
 
 body.dark-mode {
     /* Couleurs pour le mode nuit */
     --bg-color: #1e1e1e;
+    --header-color: #f0f0f0;
     --text-color: #f0f0f0;
-    --primary-color: #0d6efd; /* Bleu clair */
-    --accent-color: #6c757d;  /* Gris */
+    --primary-color: #0024dd; /* Bleu clair */
+    --accent-color: #ffffff;  /* Gris */
+    --night-color: #e7d800; 
+    --h1-color: #f0f0f0; /* Bleu */
     --input-bg-color: #2c2c2c;
     --input-border-color: #555;
     --container-bg-color: #2c2c2c;
-    --box-shadow-color: rgba(255, 255, 255, 0.1); /* Ombre blanche avec faible opacité */
-    --durability-color: #0d6efd; /* Bleu clair */
+    --box-shadow-color: rgba(255, 255, 255, 0.034); /* Ombre blanche avec faible opacité */
+    --durability-color: #0024dd; /* Bleu clair */
     --success-color: #198754; /* Vert pour les messages de succès */
 }
 
@@ -95,21 +101,21 @@ nav li {
 }
 
 nav a {
-    color: var(--bg-color);
+    color: var(--header-color);
     text-decoration: none;
     font-weight: bold;
     font-size: 18px;
 }
 
 nav a:hover {
-    color: var(--accent-color);
+    color: #e7d800;
 }
 
 /* Mode nuit */
 .header-right button {
     background: none;
     border: none;
-    color: var(--bg-color);
+    color: var(--header-color);
     font-size: 24px;
     cursor: pointer;
 }
@@ -136,7 +142,7 @@ nav a:hover {
 
 h1, h2 {
     text-align: center;
-    color: var(--primary-color);
+    color: var(--h1-color);
 }
 
 .section {
@@ -216,7 +222,7 @@ progress::-moz-progress-bar {
 
 .discipline-time span {
     font-weight: bold;
-    color: var(--primary-color);
+    color: var(#e7d800);
 }
 
 h2 i, label i {
@@ -226,7 +232,7 @@ h2 i, label i {
 
 .discipline-time p i {
     margin-right: 5px;
-    color: var(--accent-color);
+    color: var(--text);
 }
 
 /* Footer */
@@ -267,8 +273,8 @@ footer p {
 }
 
 .share-buttons a:hover {
-    background-color: var(--accent-color);
-    color: var(--text-color);
+    background-color: #f0f0f0;
+    color: #000000;
 }
 
 .share-buttons a i {
@@ -307,8 +313,8 @@ footer p {
 }
 
 .copy-button:hover {
-    background-color: var(--accent-color);
-    color: var(--bg-color);
+    background-color: #f0f0f0;
+    color: #000000;
 }
 
 /* Style pour le message de confirmation */
@@ -420,8 +426,8 @@ footer p {
 }
 
 .coaching-button:hover {
-    background-color: var(--accent-color);
-    color: var(--bg-color);
+    background-color: #f0f0f0;
+    color: #000000;
 }
 
 .video-container {
