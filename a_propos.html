@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>À Propos - Calculateur de Rythme de Triathlon</title>
+    <!-- Lien vers Font Awesome pour les icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Lien vers le fichier CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header avec le logo, le menu centré et le mode nuit -->
+    <header>
+        <div class="header-container">
+            <!-- Logo sur le côté gauche -->
+            <div class="header-left">
+                <img src="logo.png" alt="Logo Runest" class="logo">
+            </div>
+            <!-- Menu centré -->
+            <div class="header-center">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Calculateur</a></li>
+                        <li><a href="explications.html">Explications</a></li>
+                        <li><a href="a_propos.html">À Propos</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- Mode nuit -->
+            <div class="header-right">
+                <button id="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>À Propos</h1>
+        <p>Je suis <strong>Gaspard Boidin</strong>, également connu sous le nom de <strong>Gaspard Run</strong>, fondateur de <strong>Runest</strong>. En tant que coach en course à pied et créateur de contenu, ma mission est de vous aider à atteindre vos objectifs sportifs.</p>
+
+        <h2>Dernière Vidéo YouTube</h2>
+        <!-- Intégration de la dernière vidéo YouTube -->
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/aOgbBAO4vBM?si=kGlkEsqLRhjBGph5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <h2>Mes Records</h2>
+        <div class="records-container">
+            <div class="records-column">
+                <h3>Triathlon</h3>
+                <ul>
+                    <li><strong>Triathlon S :</strong> 1h10'30</li>
+                    <li><strong>Triathlon M :</strong> 2h20'17</li>
+                    <li><strong>Ironman 70.3 :</strong> A venir</li>
+                    <li><strong>Ironman :</strong> A venir</li>
+                </ul>
+            </div>
+            <div class="records-column">
+                <h3>Course à Pied</h3>
+                <ul>
+                    <li><strong>5 km :</strong> 17'39</li>
+                    <li><strong>10 km :</strong> 37'50</li>
+                    <li><strong>Semi-marathon :</strong> 1h32'27</li>
+                    <li><strong>Marathon :</strong> 3h19'32</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2>Coaching</h2>
+        <p>Si vous êtes intéressé par un coaching personnalisé en course à pied ou en triathlon, n'hésitez pas à me contacter.</p>
+        <div class="coaching-button-container">
+            <a href="https://forms.gle/9GGK95SnpKMn8ffb6" class="coaching-button" target="_blank">Demander un Coaching</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>Ce calculateur a été réalisé par <strong>Gaspard Boidin (Gaspard Run)</strong>. Tous droits réservés.</p>
+    </footer>
+
+    <!-- Script JavaScript -->
+    <script src="script.js" defer></script>
+</body>
+</html>

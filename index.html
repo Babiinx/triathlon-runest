@@ -22,12 +22,15 @@
                     <ul>
                         <li><a href="index.html">Calculateur</a></li>
                         <li><a href="explications.html">Explications</a></li>
+                        <li><a href="a_propos.html">À Propos</a></li>
                     </ul>
                 </nav>
             </div>
-            <!-- Espace pour les fonctionnalités futures -->
+            <!-- Mode nuit -->
             <div class="header-right">
-                <!-- Espace vide pour l'instant -->
+                <button id="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </button>
             </div>
         </div>
     </header>
@@ -129,14 +132,19 @@
     <div class="share-section">
         <h2>Partagez ce Calculateur</h2>
         <div class="share-buttons">
-            <a href="https://www.facebook.com/sharer/sharer.php?u=VOTRE_URL" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
-            <a href="https://twitter.com/intent/tweet?url=VOTRE_URL&text=Calculateur%20de%20Rythme%20de%20Triathlon" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
-            <a href="mailto:?subject=Calculateur%20de%20Rythme%20de%20Triathlon&body=Découvrez%20ce%20calculateur%20:%20VOTRE_URL" target="_blank"><i class="fas fa-envelope"></i> Email</a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://triathlon-runest.vercel.app/" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+            <a href="https://twitter.com/intent/tweet?url=https://triathlon-runest.vercel.app/&text=Calculateur%20de%20rythme%20de%20Triathlon" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+            <a href="mailto:?subject=Calculateur%20de%20Rythme%20de%20Triathlon&body=Découvrez%20ce%20calculateur%20:%20https://triathlon-runest.vercel.app/" target="_blank"><i class="fas fa-envelope"></i> Email</a>
         </div>
         <p>Intégrez ce calculateur sur votre site :</p>
-        <div class="embed-code">
-            &lt;iframe src="https://triathlon-runest.vercel.app/" width="100%" height="800px" frameborder="0"&gt;&lt;/iframe&gt;
+        <div class="embed-container">
+            <div class="embed-code">
+                &lt;iframe src="https://triathlon-runest.vercel.app/" width="100%" height="800px" frameborder="0"&gt;&lt;/iframe&gt;
+            </div>
+            <a href="#" id="copy-button" class="copy-button">Copier le code</a>
         </div>
+        <!-- Message de confirmation -->
+        <p id="copy-message" class="copy-message">Code copié dans le presse-papiers !</p>
     </div>
 
     <!-- Footer -->
@@ -145,7 +153,6 @@
     </footer>
 
     <!-- Charger le script avec defer pour qu'il s'exécute après le chargement du DOM -->
-    <!-- Juste avant la balise </body> à la fin de index.html -->
     <script src="script.js" defer></script>
 </body>
 </html>

@@ -140,7 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Logique simplifiée pour calculer la durabilité
             durability -= (swimPace * swimDistance) / 100;    // Influence de la natation
             durability -= (bikeDistance / bikePace) * 2;      // Influence du vélo
-            durability -= runPace * runDistance / 10;         // Influence de la course
+            durability -= (runPace * runDistance) / 10;       // Influence de la course
 
             // Limiter la durabilité entre 0 et 100
             durability = Math.max(0, Math.min(100, durability));
@@ -150,5 +150,47 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Initialiser les distances et calculer les temps au chargement
         updateDistances();
+    }
+
+    // Gestion du mode nuit/jour
+    const themeToggleButton = document.getElementById('theme-toggle');
+    if (themeToggleButton) {
+        themeToggleButton.addEventListener('click', toggleTheme);
+
+        // Vérifier le thème actuel stocké dans le localStorage
+        if (localStorage.getItem('theme') === 'dark') {
+            document.body.classList.add('dark-mode');
+            themeToggleButton.innerHTML = '<i class="fas fa-sun"></i>';
+        }
+    }
+
+    function toggleTheme() {
+        document.body.classList.toggle('dark-mode');
+        if (document.body.classList.contains('dark-mode')) {
+            themeToggleButton.innerHTML = '<i class="fas fa-sun"></i>';
+            localStorage.setItem('theme', 'dark');
+        } else {
+            themeToggleButton.innerHTML = '<i class="fas fa-moon"></i>';
+            localStorage.setItem('theme', 'light');
+        }
+    }
+
+    // Fonction pour copier le code de l'iframe
+    function copyEmbedCode(e) {
+        e.preventDefault(); // Empêcher le comportement par défaut du lien
+        const embedCode = '<iframe src="https://triathlon-runest.vercel.app/" width="100%" height="800px" frameborder="0"></iframe>';
+        navigator.clipboard.writeText(embedCode).then(() => {
+            const copyMessage = document.getElementById('copy-message');
+            copyMessage.style.display = 'block';
+            setTimeout(() => {
+                copyMessage.style.display = 'none';
+            }, 2000);
+        });
+    }
+
+    // Ajouter un écouteur d'événement au bouton
+    const copyButton = document.getElementById('copy-button');
+    if (copyButton) {
+        copyButton.addEventListener('click', copyEmbedCode);
     }
 });
